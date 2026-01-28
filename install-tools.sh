@@ -29,6 +29,6 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"' >> /home/vscod
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
 # Install essentials for working with Git
-brew install git-delta tig less scmpuff zsh-autosuggestions
+brew install git-delta tig less scmpuff zsh-autosuggestions vim
 
 echo 'eval "$(scmpuff init -s)"' >> /home/vscode/.zshrc
