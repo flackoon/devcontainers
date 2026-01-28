@@ -21,3 +21,14 @@ foundryup
 
 # Install cursor CLI
 curl https://cursor.com/install -fsS | bash
+
+# Install Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo >> /home/vscode/.zshrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"' >> /home/vscode/.zshrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+
+# Install essentials for working with Git
+brew install git-delta tig less scmpuff zsh-autosuggestions
+
+echo 'eval "$(scmpuff init -s)"' >> /home/vscode/.zshrc
