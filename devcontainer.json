@@ -30,6 +30,7 @@
       }
     }
   },
-  "forwardPorts": [],
-  "postCreateCommand": "curl https://raw.githubusercontent.com/flackoon/devcontainers/refs/heads/master/install-tools.sh | zsh"
+  "postCreateCommand": "curl https://raw.githubusercontent.com/flackoon/devcontainers/refs/heads/master/install-tools.sh | zsh",
+  "remoteUser": "vscode", // Run as non-root
+  "containerUser": "vscode"
 }
