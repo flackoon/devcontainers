@@ -18,15 +18,14 @@ alias gup="git pull"
 alias gupr="git pull --rebase"
 alias gc="git commit -v"
 alias gst="scmpuff_status"
-alias cgst="clear && gst"
-# alias gh="git log --graph --format=\"%C(bold blue)%h %C(white)| %s | %C(yellow)(%aN) %C(green)%cs\""
+alias gds="git diff --staged"
 alias gs="git stash"
 alias gsp="git stash pop"
 alias gsa="git stash apply"
-alias gsl="git stash list"
 alias gss="git stash --staged"
 alias gca="git commit -v --no-edit --amend"
 alias gcam="git commit -v --amend"
+alias gch="git checkout"
 alias gchm="git checkout master"
 alias gchs="git checkout staging"
 alias gchp="git cherry-pick"
@@ -41,6 +40,15 @@ alias grbm="git rebase master"
 pbcopy() {
   printf "\033]52;c;%s\007" "$(base64 -w0)"
 }
+
+vo() { eval "$(scmpuff expand -- "$EDITOR" "$@")" }
+gd() { git diff $(scmpuff expand -- "$@") }
+gds() { git diff --staged $(scmpuff expand -- "$@") }
+gch() { git checkout "$@" }
+unstage() { git reset -- "$@"; gst }
+revert() { git checkout -- "$@"; gst }
+fixup(){ git commit --fixup "$@" }
+
 
 # bun completions
 [ -s "/home/vscode/.bun/_bun" ] && source "/home/vscode/.bun/_bun"
