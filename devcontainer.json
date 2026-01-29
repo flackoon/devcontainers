@@ -22,7 +22,8 @@
         "NomicFoundation.hardhat-solidity",
         "golang.Go",
         "rust-lang.rust-analyzer",
-        "Cameron.rerun-last-command"
+        "Cameron.rerun-last-command",
+        "tintinweb.vscode-inline-bookmarks"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
